@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Visualize_Logs package &#8212; Visualize_Logs 20161019.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20161019.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Visualize_Logs 20161019.1 documentation" href="index.html" />
+    <link rel="up" title="Visualize_Logs" href="modules.html" />
+    <link rel="prev" title="Visualize_Logs" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="visualize-logs-package">
+<h1>Visualize_Logs package<a class="headerlink" href="#visualize-logs-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-Visualize_Logs">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Visualize_Logs" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Visualize_Logs.ProcMonCSV">
+<em class="property">class </em><code class="descclassname">Visualize_Logs.</code><code class="descname">ProcMonCSV</code><span class="sig-paren">(</span><em>csvlogfile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.ProcMonCSV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Class to hold ProcMon CSV logs.</p>
+<p><a class="reference external" href="https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx">https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx</a></p>
+<dl class="attribute">
+<dt id="Visualize_Logs.ProcMonCSV.ignorepaths">
+<code class="descname">ignorepaths</code><em class="property"> = []</em><a class="headerlink" href="#Visualize_Logs.ProcMonCSV.ignorepaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.ProcMonCSV.includepaths">
+<code class="descname">includepaths</code><em class="property"> = []</em><a class="headerlink" href="#Visualize_Logs.ProcMonCSV.includepaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Visualize_Logs.ProcMonCSV.plotgraph">
+<code class="descname">plotgraph</code><span class="sig-paren">(</span><em>graphvizprog='sfdp'</em>, <em>showproclabels=True</em>, <em>showtcplabels=True</em>, <em>showudplabels=True</em>, <em>showfilelabels=True</em>, <em>showhostlabels=True</em>, <em>plottcpconnects=True</em>, <em>plotudpsends=True</em>, <em>plotudprecvs=True</em>, <em>plotfilereads=True</em>, <em>plotfilewrites=True</em>, <em>ignorepaths=None</em>, <em>includepaths=None</em>, <em>filename='temp-plot.html'</em>, <em>title=None</em>, <em>auto_open=True</em>, <em>image=None</em>, <em>image_filename='plot_image'</em>, <em>image_height=600</em>, <em>image_width=800</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.ProcMonCSV.plotgraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to plot the graph of the ProcMon CSV.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>graphvizprog</strong> &#8211; The graphviz program to use for layout, valid
+options are &#8216;dot&#8217;, &#8216;neato&#8217;, &#8216;twopi&#8217;, &#8216;circo&#8217;, &#8216;fdp&#8217;,
+&#8216;sfdp&#8217;, &#8216;patchwork&#8217;, and &#8216;osage&#8217;.  Graphviz is REQUIRED to be
+installed and in your path to use this library!  The associated
+layout programs must be available in your path as well.  More
+information for the layout types can be found here:
+<a class="reference external" href="http://www.graphviz.org/Documentation.php">http://www.graphviz.org/Documentation.php</a>
+If this value is None, the internal networkx layout algorithms
+will be used.</li>
+<li><strong>showproclabels</strong> &#8211; If True will turn on labels on the processes.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showtcplabels</strong> &#8211; If True will turn on labels on the TCP connects.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showudplabels</strong> &#8211; If True will turn on labels on the UDP traffic.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showfilelabels</strong> &#8211; If True will turn on labels on the File IO.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showhostlabels</strong> &#8211; If True will turn on labels for the hosts.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>plottcpconnects</strong> &#8211; Set to False to remove TCP connections.</li>
+<li><strong>plotudpsends</strong> &#8211; Set to False to remove UDP sends.  This option
+can be noisy if True.</li>
+<li><strong>plotudprecvs</strong> &#8211; Set to False to remove UDP receives.  This option
+can be noisy if True.</li>
+<li><strong>plotfilereads</strong> &#8211; Set to False to remove File Reads.</li>
+<li><strong>plotfilewrites</strong> &#8211; Set to False to remove File Writes.</li>
+<li><strong>ignorepaths</strong> &#8211; Set this to a list of regular expressions.  If the
+regular expression fires in the Path column, that event will not be
+plotted.  Set to None to ignore this option.  This is case
+insensitive.  Remember back slashes need to be escaped TWICE!
+<a class="reference external" href="http://stackoverflow.com/questions/4025482/cant-escape-the-backslash-with-regex">http://stackoverflow.com/questions/4025482/cant-escape-the-backslash-with-regex</a></li>
+<li><strong>includepaths</strong> &#8211; Set this to a list of regular expressions.
+If the regular expression fires in the Path column, that event will
+be plotted.  This overrides ignores from ignorepaths above.
+Set to None to ignore this option.  This is case insensitive.  See
+the notes for ignorepaths.</li>
+<li><strong>filename</strong> &#8211; A file name for the interactive HTML plot.</li>
+<li><strong>title</strong> &#8211; A title for the plot.</li>
+<li><strong>auto_open</strong> &#8211; Set to false to not open the file in a web browser.</li>
+<li><strong>image</strong> &#8211; An image type of &#8216;png&#8217;, &#8216;jpeg&#8217;, &#8216;svg&#8217;, &#8216;webp&#8217;, or None.</li>
+<li><strong>image_filename</strong> &#8211; The file name for the exported image.</li>
+<li><strong>image_height</strong> &#8211; The number of pixels for the image height.</li>
+<li><strong>image_width</strong> &#8211; The number of pixels for the image width.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Nothing</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.VisualizeLogsBadFunctionInput">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.</code><code class="descname">VisualizeLogsBadFunctionInput</code><span class="sig-paren">(</span><em>inputname</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.VisualizeLogsBadFunctionInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when bad input is given to a function.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.VisualizeLogsInvalidFile">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.</code><code class="descname">VisualizeLogsInvalidFile</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.VisualizeLogsInvalidFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when a file does not exist or is invalid.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.VisualizeLogsInvalidFileStructure">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.</code><code class="descname">VisualizeLogsInvalidFileStructure</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.VisualizeLogsInvalidFileStructure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when a file&#8217;s content is not structured correctly.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.VisualizeLogsMissingRequiredField">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.</code><code class="descname">VisualizeLogsMissingRequiredField</code><span class="sig-paren">(</span><em>filepath</em>, <em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.VisualizeLogsMissingRequiredField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when a file&#8217;s content is missing a data field.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.VisualizeLogsParseError">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.</code><code class="descname">VisualizeLogsParseError</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.VisualizeLogsParseError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when data cannot be parsed correctly.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Visualize_Logs package</a><ul>
+<li><a class="reference internal" href="#module-Visualize_Logs">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Visualize_Logs</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">Visualize_Logs</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Visualize_Logs.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Keith J. Jones.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/Visualize_Logs.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
