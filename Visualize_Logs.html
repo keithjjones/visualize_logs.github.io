@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Visualize_Logs package &#8212; Visualize_Logs 20161020.1 documentation</title>
+    <title>Visualize_Logs package &#8212; Visualize_Logs 20161022.1 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '20161020.1',
+        VERSION:     '20161022.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="Visualize_Logs 20161020.1 documentation" href="index.html" />
+    <link rel="top" title="Visualize_Logs 20161022.1 documentation" href="index.html" />
     <link rel="up" title="Visualize_Logs" href="modules.html" />
     <link rel="prev" title="Visualize_Logs" href="modules.html" />
    
@@ -65,7 +65,7 @@
 
 <dl class="method">
 <dt id="Visualize_Logs.ProcMonCSV.plotgraph">
-<code class="descname">plotgraph</code><span class="sig-paren">(</span><em>graphvizprog='sfdp'</em>, <em>showproclabels=True</em>, <em>showtcplabels=True</em>, <em>showudplabels=True</em>, <em>showfilelabels=True</em>, <em>showhostlabels=True</em>, <em>plottcpconnects=True</em>, <em>plotudpsends=True</em>, <em>plotudprecvs=True</em>, <em>plotfilereads=True</em>, <em>plotfilewrites=True</em>, <em>plotfiledeletes=True</em>, <em>ignorepaths=None</em>, <em>includepaths=None</em>, <em>filename='temp-plot.html'</em>, <em>title=None</em>, <em>auto_open=True</em>, <em>image=None</em>, <em>image_filename='plot_image'</em>, <em>image_height=600</em>, <em>image_width=800</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.ProcMonCSV.plotgraph" title="Permalink to this definition">¶</a></dt>
+<code class="descname">plotgraph</code><span class="sig-paren">(</span><em>graphvizprog='sfdp'</em>, <em>showproclabels=True</em>, <em>showtcplabels=True</em>, <em>showudplabels=True</em>, <em>showfilelabels=True</em>, <em>showhostlabels=True</em>, <em>showreglabels=True</em>, <em>plottcpconnects=True</em>, <em>plotudpsends=True</em>, <em>plotudprecvs=True</em>, <em>plotfilereads=True</em>, <em>plotfilewrites=True</em>, <em>plotfiledeletes=True</em>, <em>plotfilerenames=True</em>, <em>plotregwrites=True</em>, <em>plotregreads=True</em>, <em>plotregdeletes=True</em>, <em>ignorepaths=None</em>, <em>includepaths=None</em>, <em>filename='temp-plot.html'</em>, <em>title=None</em>, <em>auto_open=True</em>, <em>image=None</em>, <em>image_filename='plot_image'</em>, <em>image_height=600</em>, <em>image_width=800</em><span class="sig-paren">)</span><a class="headerlink" href="#Visualize_Logs.ProcMonCSV.plotgraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to plot the graph of the ProcMon CSV.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -96,6 +96,9 @@ The data can be viewed with mouse overs either way.</li>
 <li><strong>showhostlabels</strong> &#8211; If True will turn on labels for the hosts.
 Set to False to clean up your plot and not show the labels.
 The data can be viewed with mouse overs either way.</li>
+<li><strong>showhostlabels</strong> &#8211; If True will turn on labels for registry.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
 <li><strong>plottcpconnects</strong> &#8211; Set to False to remove TCP connections.</li>
 <li><strong>plotudpsends</strong> &#8211; Set to False to remove UDP sends.  This option
 can be noisy if True.</li>
@@ -104,6 +107,10 @@ can be noisy if True.</li>
 <li><strong>plotfilereads</strong> &#8211; Set to False to remove File Reads.</li>
 <li><strong>plotfilewrites</strong> &#8211; Set to False to remove File Writes.</li>
 <li><strong>plotfiledeletes</strong> &#8211; Set to False to remove File Deletes.</li>
+<li><strong>plotfilerenames</strong> &#8211; Set to False to remove File Renames.</li>
+<li><strong>plotregwrites</strong> &#8211; Set to False to remove registry writes.</li>
+<li><strong>plotregreads</strong> &#8211; Set to False to remove registry reads.</li>
+<li><strong>plotregdeletes</strong> &#8211; Set to False to remove registry deletes.</li>
 <li><strong>ignorepaths</strong> &#8211; Set this to a list of regular expressions.  If the
 regular expression fires in the Path column, that event will not be
 plotted.  Set to None to ignore this option.  This is case
