@@ -41,8 +41,8 @@ plotprocmoncsv
 .. _Example 4: https://keithjjones.github.io/visualize_logs.github.io/gallery/procmoncsv/ransomware_example4.html
 .. _Example 5: https://keithjjones.github.io/visualize_logs.github.io/gallery/procmoncsv/ransomware_example5.html
 
-Indices and Tables
-------------------
+Library (API) Documentation
+---------------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
