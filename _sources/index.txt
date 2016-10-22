@@ -37,7 +37,7 @@ plotprocmoncsv
 .. _ProcMon: https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx
 .. _Example 1: https://keithjjones.github.io/visualize_logs.github.io/gallery/procmoncsv/ransomware_example1.html
 .. _Example 2: https://keithjjones.github.io/visualize_logs.github.io/gallery/procmoncsv/ransomware_example2.html
-.. _Example 3: https://keithjjones.github.io/visualize_logs.github.io/gallery/procmoncsv/ransomware_example2.html
+.. _Example 3: https://keithjjones.github.io/visualize_logs.github.io/gallery/procmoncsv/ransomware_example3.html
 .. _Example 4: https://keithjjones.github.io/visualize_logs.github.io/gallery/procmoncsv/ransomware_example4.html
 .. _Example 5: https://keithjjones.github.io/visualize_logs.github.io/gallery/procmoncsv/ransomware_example5.html
 
