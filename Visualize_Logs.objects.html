@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Visualize_Logs.objects package &#8212; Visualize_Logs 20161111.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '20161111.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Visualize_Logs 20161111.1 documentation" href="index.html" />
+    <link rel="up" title="Visualize_Logs package" href="Visualize_Logs.html" />
+    <link rel="prev" title="Visualize_Logs package" href="Visualize_Logs.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="visualize-logs-objects-package">
+<h1>Visualize_Logs.objects package<a class="headerlink" href="#visualize-logs-objects-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Visualize_Logs.objects.CuckooJSONReport">
+<span id="visualize-logs-objects-cuckoojsonreport-module"></span><h2>Visualize_Logs.objects.CuckooJSONReport module<a class="headerlink" href="#module-Visualize_Logs.objects.CuckooJSONReport" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport">
+<em class="property">class </em><code class="descclassname">Visualize_Logs.objects.CuckooJSONReport.</code><code class="descname">CuckooJSONReport</code><span class="sig-paren">(</span><em>jsonreportfile=None</em>, <em>plotnetwork=True</em>, <em>plotfiles=True</em>, <em>plotfilecreates=True</em>, <em>plotfiledeletes=True</em>, <em>plotfilemoves=True</em>, <em>plotfilecopies=True</em>, <em>plotfilewrites=True</em>, <em>plotfilereads=True</em>, <em>plotregistry=True</em>, <em>plotregistrywrites=True</em>, <em>plotregistryreads=True</em>, <em>plotregistrydeletes=True</em>, <em>plotregistrycreates=True</em>, <em>ignorepaths=None</em>, <em>includepaths=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/CuckooJSONReport.html#CuckooJSONReport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Class to hold Cuckoo-Modified JSON reports.</p>
+<p><a class="reference external" href="https://github.com/spender-sandbox/cuckoo-modified">https://github.com/spender-sandbox/cuckoo-modified</a></p>
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.DiGraph">
+<code class="descname">DiGraph</code><em class="property"> = None</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.DiGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>This holds the Networkx digraph to be plotted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.IPProto">
+<code class="descname">IPProto</code><em class="property"> = {0: 'IPPROTO_IP', 1: 'IPPROTO_ICMP', 4: 'IPPROTO_IGMP', 6: 'IPPROTO_TCP', 8: 'IPPROTO_EGP', 137: 'IPPROTO_MPLS', 12: 'IPPROTO_PUP', 17: 'IPPROTO_UDP', 132: 'IPPROTO_SCTP', 92: 'IPPROTO_MTP', 29: 'IPPROTO_IDP', 94: 'IPPROTO_BEETPH', 33: 'IPPROTO_DCCP', 98: 'IPPROTO_ENCAP', 103: 'IPPROTO_PIM', 41: 'IPPROTO_IPV6', 108: 'IPPROTO_COMP', 46: 'IPPROTO_RSVP', 47: 'IPPROTO_GRE', 136: 'IPPROTO_UDPLITE', 50: 'IPPROTO_ESP', 51: 'IPPROTO_AH', 255: 'IPPROTO_RAW'}</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.IPProto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information available:
+<a class="reference external" href="http://lxr.free-electrons.com/source/include/uapi/linux/in.h">http://lxr.free-electrons.com/source/include/uapi/linux/in.h</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.edgemetadata">
+<code class="descname">edgemetadata</code><em class="property"> = {}</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.edgemetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a dict of (edge1,edge2) that will hold dicts of metadata
+for each edge.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.graphvizprog">
+<code class="descname">graphvizprog</code><em class="property"> = None</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.graphvizprog" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the graphviz program used to generate the layout.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.ignorepaths">
+<code class="descname">ignorepaths</code><em class="property"> = []</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.ignorepaths" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of regular expressions to ignore in file or registry data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.includepaths">
+<code class="descname">includepaths</code><em class="property"> = []</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.includepaths" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of regular expressions to include in file or registry data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.jsonreportdata">
+<code class="descname">jsonreportdata</code><em class="property"> = None</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.jsonreportdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>This holds the actual data of the JSON report.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.jsonreportfile">
+<code class="descname">jsonreportfile</code><em class="property"> = None</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.jsonreportfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>The JSON report file path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.nodemetadata">
+<code class="descname">nodemetadata</code><em class="property"> = {}</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.nodemetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a dict that will hold dicts of metadata for each node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.plotgraph">
+<code class="descname">plotgraph</code><span class="sig-paren">(</span><em>graphvizprog='sfdp'</em>, <em>filename='temp-plot.html'</em>, <em>title=None</em>, <em>auto_open=True</em>, <em>image=None</em>, <em>image_filename='plot_image'</em>, <em>image_height=600</em>, <em>image_width=800</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/CuckooJSONReport.html#CuckooJSONReport.plotgraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.plotgraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to plot the graph of the ProcMon CSV.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>graphvizprog</strong> &#8211; The graphviz program to use for layout, valid
+options are &#8216;dot&#8217;, &#8216;neato&#8217;, &#8216;twopi&#8217;, &#8216;circo&#8217;, &#8216;fdp&#8217;,
+&#8216;sfdp&#8217;, &#8216;patchwork&#8217;, and &#8216;osage&#8217;.  Graphviz is REQUIRED to be
+installed and in your path to use this library!  The associated
+layout programs must be available in your path as well.  More
+information for the layout types can be found here:
+<a class="reference external" href="http://www.graphviz.org/Documentation.php">http://www.graphviz.org/Documentation.php</a>
+If this value is None, the internal networkx layout algorithms
+will be used.</li>
+<li><strong>filename</strong> &#8211; A file name for the interactive HTML plot.</li>
+<li><strong>title</strong> &#8211; A title for the plot.</li>
+<li><strong>auto_open</strong> &#8211; Set to false to not open the file in a web browser.</li>
+<li><strong>image</strong> &#8211; An image type of &#8216;png&#8217;, &#8216;jpeg&#8217;, &#8216;svg&#8217;, &#8216;webp&#8217;, or None.</li>
+<li><strong>image_filename</strong> &#8211; The file name for the exported image.</li>
+<li><strong>image_height</strong> &#8211; The number of pixels for the image height.</li>
+<li><strong>image_width</strong> &#8211; The number of pixels for the image width.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Nothing</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.rootpid">
+<code class="descname">rootpid</code><em class="property"> = None</em><a class="headerlink" href="#Visualize_Logs.objects.CuckooJSONReport.CuckooJSONReport.rootpid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the pid (Node) on top.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Visualize_Logs.objects.Exceptions">
+<span id="visualize-logs-objects-exceptions-module"></span><h2>Visualize_Logs.objects.Exceptions module<a class="headerlink" href="#module-Visualize_Logs.objects.Exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="Visualize_Logs.objects.Exceptions.VisualizeLogsBadFunctionInput">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.objects.Exceptions.</code><code class="descname">VisualizeLogsBadFunctionInput</code><span class="sig-paren">(</span><em>inputname</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/Exceptions.html#VisualizeLogsBadFunctionInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.Exceptions.VisualizeLogsBadFunctionInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when bad input is given to a function.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.objects.Exceptions.VisualizeLogsInvalidFile">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.objects.Exceptions.</code><code class="descname">VisualizeLogsInvalidFile</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/Exceptions.html#VisualizeLogsInvalidFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.Exceptions.VisualizeLogsInvalidFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when a file does not exist or is invalid.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.objects.Exceptions.VisualizeLogsInvalidFileStructure">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.objects.Exceptions.</code><code class="descname">VisualizeLogsInvalidFileStructure</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/Exceptions.html#VisualizeLogsInvalidFileStructure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.Exceptions.VisualizeLogsInvalidFileStructure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when a file&#8217;s content is not structured correctly.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.objects.Exceptions.VisualizeLogsMissingRequiredField">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.objects.Exceptions.</code><code class="descname">VisualizeLogsMissingRequiredField</code><span class="sig-paren">(</span><em>filepath</em>, <em>field</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/Exceptions.html#VisualizeLogsMissingRequiredField"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.Exceptions.VisualizeLogsMissingRequiredField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when a file&#8217;s content is missing a data field.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="Visualize_Logs.objects.Exceptions.VisualizeLogsParseError">
+<em class="property">exception </em><code class="descclassname">Visualize_Logs.objects.Exceptions.</code><code class="descname">VisualizeLogsParseError</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/Exceptions.html#VisualizeLogsParseError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.Exceptions.VisualizeLogsParseError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception for when data cannot be parsed correctly.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-Visualize_Logs.objects.ProcMonCSV">
+<span id="visualize-logs-objects-procmoncsv-module"></span><h2>Visualize_Logs.objects.ProcMonCSV module<a class="headerlink" href="#module-Visualize_Logs.objects.ProcMonCSV" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Visualize_Logs.objects.ProcMonCSV.ProcMonCSV">
+<em class="property">class </em><code class="descclassname">Visualize_Logs.objects.ProcMonCSV.</code><code class="descname">ProcMonCSV</code><span class="sig-paren">(</span><em>csvlogfile=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/ProcMonCSV.html#ProcMonCSV"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.ProcMonCSV.ProcMonCSV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Class to hold ProcMon CSV logs.</p>
+<p><a class="reference external" href="https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx">https://technet.microsoft.com/en-us/sysinternals/processmonitor.aspx</a></p>
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.ProcMonCSV.ProcMonCSV.ignorepaths">
+<code class="descname">ignorepaths</code><em class="property"> = []</em><a class="headerlink" href="#Visualize_Logs.objects.ProcMonCSV.ProcMonCSV.ignorepaths" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of regular expressions to ignore in Path column.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Visualize_Logs.objects.ProcMonCSV.ProcMonCSV.includepaths">
+<code class="descname">includepaths</code><em class="property"> = []</em><a class="headerlink" href="#Visualize_Logs.objects.ProcMonCSV.ProcMonCSV.includepaths" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of regular expressions to include in Path column.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Visualize_Logs.objects.ProcMonCSV.ProcMonCSV.plotgraph">
+<code class="descname">plotgraph</code><span class="sig-paren">(</span><em>graphvizprog='sfdp'</em>, <em>showproclabels=True</em>, <em>showtcplabels=True</em>, <em>showudplabels=True</em>, <em>showfilelabels=True</em>, <em>showhostlabels=True</em>, <em>showreglabels=True</em>, <em>plottcpconnects=True</em>, <em>plotudpsends=True</em>, <em>plotudprecvs=True</em>, <em>plotfilereads=True</em>, <em>plotfilewrites=True</em>, <em>plotfiledeletes=True</em>, <em>plotfilerenames=True</em>, <em>plotregwrites=True</em>, <em>plotregreads=True</em>, <em>plotregdeletes=True</em>, <em>ignorepaths=None</em>, <em>includepaths=None</em>, <em>filename='temp-plot.html'</em>, <em>title=None</em>, <em>auto_open=True</em>, <em>image=None</em>, <em>image_filename='plot_image'</em>, <em>image_height=600</em>, <em>image_width=800</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Visualize_Logs/objects/ProcMonCSV.html#ProcMonCSV.plotgraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Visualize_Logs.objects.ProcMonCSV.ProcMonCSV.plotgraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to plot the graph of the ProcMon CSV.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>graphvizprog</strong> &#8211; The graphviz program to use for layout, valid
+options are &#8216;dot&#8217;, &#8216;neato&#8217;, &#8216;twopi&#8217;, &#8216;circo&#8217;, &#8216;fdp&#8217;,
+&#8216;sfdp&#8217;, &#8216;patchwork&#8217;, and &#8216;osage&#8217;.  Graphviz is REQUIRED to be
+installed and in your path to use this library!  The associated
+layout programs must be available in your path as well.  More
+information for the layout types can be found here:
+<a class="reference external" href="http://www.graphviz.org/Documentation.php">http://www.graphviz.org/Documentation.php</a>
+If this value is None, the internal networkx layout algorithms
+will be used.</li>
+<li><strong>showproclabels</strong> &#8211; If True will turn on labels on the processes.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showtcplabels</strong> &#8211; If True will turn on labels on the TCP connects.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showudplabels</strong> &#8211; If True will turn on labels on the UDP traffic.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showfilelabels</strong> &#8211; If True will turn on labels on the File IO.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showhostlabels</strong> &#8211; If True will turn on labels for the hosts.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>showhostlabels</strong> &#8211; If True will turn on labels for registry.
+Set to False to clean up your plot and not show the labels.
+The data can be viewed with mouse overs either way.</li>
+<li><strong>plottcpconnects</strong> &#8211; Set to False to remove TCP connections.</li>
+<li><strong>plotudpsends</strong> &#8211; Set to False to remove UDP sends.  This option
+can be noisy if True.</li>
+<li><strong>plotudprecvs</strong> &#8211; Set to False to remove UDP receives.  This option
+can be noisy if True.</li>
+<li><strong>plotfilereads</strong> &#8211; Set to False to remove File Reads.</li>
+<li><strong>plotfilewrites</strong> &#8211; Set to False to remove File Writes.</li>
+<li><strong>plotfiledeletes</strong> &#8211; Set to False to remove File Deletes.</li>
+<li><strong>plotfilerenames</strong> &#8211; Set to False to remove File Renames.</li>
+<li><strong>plotregwrites</strong> &#8211; Set to False to remove registry writes.</li>
+<li><strong>plotregreads</strong> &#8211; Set to False to remove registry reads.</li>
+<li><strong>plotregdeletes</strong> &#8211; Set to False to remove registry deletes.</li>
+<li><strong>ignorepaths</strong> &#8211; Set this to a list of regular expressions.  If the
+regular expression fires in the Path column, that event will not be
+plotted.  Set to None to ignore this option.  This is case
+insensitive.  Remember to double escape since this is
+interpreted twice!</li>
+<li><strong>includepaths</strong> &#8211; Set this to a list of regular expressions.
+If the regular expression fires in the Path column, that event will
+be plotted.  This overrides ignores from ignorepaths above.
+Set to None to ignore this option.  This is case insensitive.
+Remember to double escape since this is interpreted twice!</li>
+<li><strong>filename</strong> &#8211; A file name for the interactive HTML plot.</li>
+<li><strong>title</strong> &#8211; A title for the plot.</li>
+<li><strong>auto_open</strong> &#8211; Set to false to not open the file in a web browser.</li>
+<li><strong>image</strong> &#8211; An image type of &#8216;png&#8217;, &#8216;jpeg&#8217;, &#8216;svg&#8217;, &#8216;webp&#8217;, or None.</li>
+<li><strong>image_filename</strong> &#8211; The file name for the exported image.</li>
+<li><strong>image_height</strong> &#8211; The number of pixels for the image height.</li>
+<li><strong>image_width</strong> &#8211; The number of pixels for the image width.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Nothing</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Visualize_Logs.objects">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Visualize_Logs.objects" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Visualize_Logs.objects package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-Visualize_Logs.objects.CuckooJSONReport">Visualize_Logs.objects.CuckooJSONReport module</a></li>
+<li><a class="reference internal" href="#module-Visualize_Logs.objects.Exceptions">Visualize_Logs.objects.Exceptions module</a></li>
+<li><a class="reference internal" href="#module-Visualize_Logs.objects.ProcMonCSV">Visualize_Logs.objects.ProcMonCSV module</a></li>
+<li><a class="reference internal" href="#module-Visualize_Logs.objects">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Visualize_Logs</a><ul>
+  <li><a href="Visualize_Logs.html">Visualize_Logs package</a><ul>
+      <li>Previous: <a href="Visualize_Logs.html" title="previous chapter">Visualize_Logs package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Visualize_Logs.objects.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Keith J. Jones.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/Visualize_Logs.objects.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
